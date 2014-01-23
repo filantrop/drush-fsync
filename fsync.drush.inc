@@ -11,7 +11,7 @@ function drush_fsync_values_fsync($site = NULL) {
     //drush_print($site);
     //$site_settings = _drush_sitealias_get_record($site);
 
-    drush_print($site_settings);
+    drush_print(print_r($site_settings));
     if(array_key_exists('site-list', $site_settings)) {
         
         drush_print($site_settings);

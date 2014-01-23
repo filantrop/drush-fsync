@@ -7,12 +7,13 @@ function drush_fsync_values_fsync($site = NULL) {
     $site_settings = array();
 
     $site_settings = drush_sitealias_evaluate_path($site,$additional_options , FALSE, "", '');
-    
+	
+	  
     //drush_print($site);
     //$site_settings = _drush_sitealias_get_record($site);
 
     drush_print(print_r($site_settings));
-    if(array_key_exists('site-list', $site_settings)) {
+    if(array_key_exists('values', $site_settings)) {
         
         drush_print($site_settings);
     }
